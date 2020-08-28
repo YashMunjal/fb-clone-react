@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header'
+import Header from './components/Header/Header'
+import Sidebar from './components/sidebar/Sidebar'
 function App() {
   return (
     //BEM naming convention
@@ -8,7 +9,9 @@ function App() {
 
       {/*Header*/}
       <Header></Header>
-
+      <div className="app__body">
+        <Sidebar></Sidebar>
+      </div>
 
       {/*App Body*/}
 
