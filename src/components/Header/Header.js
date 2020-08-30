@@ -11,6 +11,8 @@ import AddIcon from '@material-ui/icons/Add'
 import ForumIcon from '@material-ui/icons/Forum'
 import NotificationsActive from '@material-ui/icons/NotificationsActive'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import {useStateValue} from '../../StateProvider'
+
 function header() {
   return (
     <div className="header">
