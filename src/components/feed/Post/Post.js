@@ -3,14 +3,16 @@ import './Post.css'
 import { Avatar } from '@material-ui/core'
 import {ExpandMoreOutlined, ChatBubbleOutline, NearMe, AccountCircle, ThumbUp} from '@material-ui/icons'
 
+
 function Post({profilePic, image, username,timestamp,message}) {
+    console.log(timestamp.seconds);
     return (
         <div className="post">
                 <div className="post__top">
                     <Avatar src={profilePic} className="post__avatar" />
                     <div className="post__topInfo" >
                         <h3>{username}</h3>
-    <p>{Date.now()}</p>
+    <p>{new Date((timestamp.seconds)*1000).toDateString()}</p>
                     </div>
                 </div>
             <div className="post__bottom">

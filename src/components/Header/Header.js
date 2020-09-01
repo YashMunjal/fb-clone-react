@@ -13,7 +13,8 @@ import NotificationsActive from '@material-ui/icons/NotificationsActive'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import {useStateValue} from '../../StateProvider'
 
-function header() {
+function Header() {
+  const [{user},dispatch]=useStateValue();
   return (
     <div className="header">
       <div className="header__left">
@@ -36,18 +37,18 @@ function header() {
         </div>
         <div className="header__option">
           <SubscriptionOutlined fontSize="large" />
-        </div>{" "}
+        </div>
         <div className="header__option">
           <StoreFrontOutlinedIcon fontSize="large" />
-        </div>{" "}
+        </div>
         <div className="header__option">
           <SuperVisedCircleIcon fontSize="large" />
         </div>
       </div>
       <div className="header__right">
           <div className="header__info">
-              <Avatar />
-              <h4>Yash Munjal</h4>
+              <Avatar src={user.photoURL}/>
+  <h4>{user.displayName}</h4>
           </div>
           <IconButton>
               <AddIcon />
@@ -66,4 +67,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;
